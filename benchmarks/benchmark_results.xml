@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catch name="hyperion_benchmarks">
+  <Group name="hyperion_benchmarks">
+    <TestCase name="B-Spline Cost Functions (Basalt) - SO3_4" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="52" clockResolution="16.7771" estimatedDuration="1.6796e+06">
+        <!--All values in nano seconds-->
+        <mean value="315.631" lowerBound="312.282" upperBound="323.082" ci="0.95"/>
+        <standardDeviation value="23.9854" lowerBound="12.2281" upperBound="42.2089" ci="0.95"/>
+        <outliers variance="0.686742" lowMild="0" lowSevere="0" highMild="0" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="3" clockResolution="16.7771" estimatedDuration="2.0394e+06">
+        <!--All values in nano seconds-->
+        <mean value="6699.81" lowerBound="6623.99" upperBound="6834.25" ci="0.95"/>
+        <standardDeviation value="499.736" lowerBound="294.776" upperBound="728.427" ci="0.95"/>
+        <outliers variance="0.676629" lowMild="0" lowSevere="0" highMild="1" highSevere="7"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="54" clockResolution="16.7771" estimatedDuration="1.6848e+06">
+        <!--All values in nano seconds-->
+        <mean value="289.704" lowerBound="285.213" upperBound="296.639" ci="0.95"/>
+        <standardDeviation value="27.9221" lowerBound="20.1361" upperBound="39.1941" ci="0.95"/>
+        <outliers variance="0.779502" lowMild="0" lowSevere="0" highMild="3" highSevere="9"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="3" clockResolution="16.7771" estimatedDuration="2.4066e+06">
+        <!--All values in nano seconds-->
+        <mean value="7820.07" lowerBound="7787.57" upperBound="7884.82" ci="0.95"/>
+        <standardDeviation value="224.511" lowerBound="135.984" upperBound="434.932" ci="0.95"/>
+        <outliers variance="0.229081" lowMild="0" lowSevere="0" highMild="0" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="48" clockResolution="16.7771" estimatedDuration="1.68e+06">
+        <!--All values in nano seconds-->
+        <mean value="327.695" lowerBound="325.065" upperBound="332.876" ci="0.95"/>
+        <standardDeviation value="17.9711" lowerBound="10.8096" upperBound="30.9807" ci="0.95"/>
+        <outliers variance="0.524851" lowMild="5" lowSevere="0" highMild="1" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="2" clockResolution="16.7771" estimatedDuration="1.9452e+06">
+        <!--All values in nano seconds-->
+        <mean value="9460.95" lowerBound="9419.52" upperBound="9601.96" ci="0.95"/>
+        <standardDeviation value="349.424" lowerBound="117.006" upperBound="790.571" ci="0.95"/>
+        <outliers variance="0.335968" lowMild="0" lowSevere="0" highMild="0" highSevere="1"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Basalt) - SO3_5" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="41" clockResolution="16.7771" estimatedDuration="1.6933e+06">
+        <!--All values in nano seconds-->
+        <mean value="413.878" lowerBound="409.143" upperBound="424.619" ci="0.95"/>
+        <standardDeviation value="34.3739" lowerBound="14.0337" upperBound="61.4558" ci="0.95"/>
+        <outliers variance="0.727596" lowMild="1" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="2" clockResolution="16.7771" estimatedDuration="2.195e+06">
+        <!--All values in nano seconds-->
+        <mean value="10787.4" lowerBound="10624.7" upperBound="11075.4" ci="0.95"/>
+        <standardDeviation value="1070.59" lowerBound="680.528" upperBound="1554.61" ci="0.95"/>
+        <outliers variance="0.789847" lowMild="0" lowSevere="0" highMild="1" highSevere="9"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="43" clockResolution="16.7771" estimatedDuration="1.6899e+06">
+        <!--All values in nano seconds-->
+        <mean value="367.4" lowerBound="364.881" upperBound="372.458" ci="0.95"/>
+        <standardDeviation value="17.4871" lowerBound="10.3367" upperBound="31.6412" ci="0.95"/>
+        <outliers variance="0.454764" lowMild="0" lowSevere="0" highMild="8" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="2" clockResolution="16.7771" estimatedDuration="2.6912e+06">
+        <!--All values in nano seconds-->
+        <mean value="12698.3" lowerBound="12590.4" upperBound="12941.8" ci="0.95"/>
+        <standardDeviation value="781.842" lowerBound="332.758" upperBound="1360.65" ci="0.95"/>
+        <outliers variance="0.585162" lowMild="0" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="35" clockResolution="16.7771" estimatedDuration="1.687e+06">
+        <!--All values in nano seconds-->
+        <mean value="395.984" lowerBound="392.055" upperBound="402.424" ci="0.95"/>
+        <standardDeviation value="25.2382" lowerBound="17.2066" upperBound="35.5388" ci="0.95"/>
+        <outliers variance="0.605214" lowMild="0" lowSevere="0" highMild="2" highSevere="8"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="2" clockResolution="16.7771" estimatedDuration="3.3054e+06">
+        <!--All values in nano seconds-->
+        <mean value="15758.9" lowerBound="15697.2" upperBound="15864.5" ci="0.95"/>
+        <standardDeviation value="400.243" lowerBound="239.075" upperBound="638.693" ci="0.95"/>
+        <outliers variance="0.190311" lowMild="2" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Basalt) - SO3_6" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="37" clockResolution="16.7771" estimatedDuration="1.6909e+06">
+        <!--All values in nano seconds-->
+        <mean value="477.678" lowerBound="471.606" upperBound="492.925" ci="0.95"/>
+        <standardDeviation value="45.8698" lowerBound="20.0606" upperBound="92.7781" ci="0.95"/>
+        <outliers variance="0.779425" lowMild="0" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="2" clockResolution="16.7771" estimatedDuration="3.268e+06">
+        <!--All values in nano seconds-->
+        <mean value="15664.7" lowerBound="15532.2" upperBound="15938" ci="0.95"/>
+        <standardDeviation value="929.503" lowerBound="497.723" upperBound="1525.34" ci="0.95"/>
+        <outliers variance="0.565071" lowMild="0" lowSevere="0" highMild="0" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="39" clockResolution="16.7771" estimatedDuration="1.7043e+06">
+        <!--All values in nano seconds-->
+        <mean value="441.896" lowerBound="437.975" upperBound="447.163" ci="0.95"/>
+        <standardDeviation value="23.0242" lowerBound="18.3982" upperBound="33.8386" ci="0.95"/>
+        <outliers variance="0.504437" lowMild="0" lowSevere="0" highMild="1" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="1.9699e+06">
+        <!--All values in nano seconds-->
+        <mean value="18723.2" lowerBound="18520.3" upperBound="19223.6" ci="0.95"/>
+        <standardDeviation value="1516.59" lowerBound="738.462" upperBound="3040.14" ci="0.95"/>
+        <outliers variance="0.717309" lowMild="0" lowSevere="0" highMild="0" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="32" clockResolution="16.7771" estimatedDuration="1.7184e+06">
+        <!--All values in nano seconds-->
+        <mean value="482.691" lowerBound="478.406" upperBound="491.374" ci="0.95"/>
+        <standardDeviation value="29.8591" lowerBound="17.4207" upperBound="48.079" ci="0.95"/>
+        <outliers variance="0.5853" lowMild="0" lowSevere="0" highMild="5" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="2.502e+06">
+        <!--All values in nano seconds-->
+        <mean value="24301.4" lowerBound="23924.7" upperBound="24918" ci="0.95"/>
+        <standardDeviation value="2412.28" lowerBound="1626.34" upperBound="3276.6" ci="0.95"/>
+        <outliers variance="0.789851" lowMild="0" lowSevere="0" highMild="2" highSevere="9"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Basalt) - SE3_4" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="25" clockResolution="16.7771" estimatedDuration="1.69e+06">
+        <!--All values in nano seconds-->
+        <mean value="702.628" lowerBound="667.544" upperBound="755.192" ci="0.95"/>
+        <standardDeviation value="215.571" lowerBound="163.092" upperBound="331.767" ci="0.95"/>
+        <outliers variance="0.978406" lowMild="0" lowSevere="0" highMild="13" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="5.0389e+06">
+        <!--All values in nano seconds-->
+        <mean value="46921.1" lowerBound="46614.5" upperBound="47604.1" ci="0.95"/>
+        <standardDeviation value="2211.69" lowerBound="1079.64" upperBound="3766.62" ci="0.95"/>
+        <outliers variance="0.454465" lowMild="0" lowSevere="0" highMild="1" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="24" clockResolution="16.7771" estimatedDuration="1.74e+06">
+        <!--All values in nano seconds-->
+        <mean value="745.847" lowerBound="710.254" upperBound="800.848" ci="0.95"/>
+        <standardDeviation value="222.206" lowerBound="167.294" upperBound="347.821" ci="0.95"/>
+        <outliers variance="0.978309" lowMild="0" lowSevere="0" highMild="6" highSevere="13"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="5.6736e+06">
+        <!--All values in nano seconds-->
+        <mean value="53462.8" lowerBound="52978.3" upperBound="54242.8" ci="0.95"/>
+        <standardDeviation value="3090.33" lowerBound="2140.22" upperBound="4172.52" ci="0.95"/>
+        <outliers variance="0.554806" lowMild="1" lowSevere="0" highMild="7" highSevere="9"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="22" clockResolution="16.7771" estimatedDuration="1.7358e+06">
+        <!--All values in nano seconds-->
+        <mean value="688.403" lowerBound="680.789" upperBound="703.933" ci="0.95"/>
+        <standardDeviation value="53.3476" lowerBound="30.3981" upperBound="94.8696" ci="0.95"/>
+        <outliers variance="0.696884" lowMild="0" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="7.1056e+06">
+        <!--All values in nano seconds-->
+        <mean value="62532.8" lowerBound="62203.7" upperBound="63116.2" ci="0.95"/>
+        <standardDeviation value="2173.38" lowerBound="1474.05" upperBound="3612.05" ci="0.95"/>
+        <outliers variance="0.306755" lowMild="0" lowSevere="0" highMild="0" highSevere="13"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Basalt) - SE3_5" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="21" clockResolution="16.7771" estimatedDuration="1.6821e+06">
+        <!--All values in nano seconds-->
+        <mean value="738.01" lowerBound="735.034" upperBound="745.133" ci="0.95"/>
+        <standardDeviation value="21.9136" lowerBound="6.37546" upperBound="39.9926" ci="0.95"/>
+        <outliers variance="0.24802" lowMild="2" lowSevere="0" highMild="3" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="8.3149e+06">
+        <!--All values in nano seconds-->
+        <mean value="96482.3" lowerBound="95732.7" upperBound="97747.3" ci="0.95"/>
+        <standardDeviation value="4821.28" lowerBound="3309.63" upperBound="7074.79" ci="0.95"/>
+        <outliers variance="0.484357" lowMild="1" lowSevere="0" highMild="4" highSevere="14"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="18" clockResolution="16.7771" estimatedDuration="1.71e+06">
+        <!--All values in nano seconds-->
+        <mean value="873.092" lowerBound="856.98" upperBound="904.206" ci="0.95"/>
+        <standardDeviation value="110.346" lowerBound="70.2429" upperBound="185.21" ci="0.95"/>
+        <outliers variance="0.862596" lowMild="0" lowSevere="0" highMild="2" highSevere="8"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="9.7796e+06">
+        <!--All values in nano seconds-->
+        <mean value="94422.8" lowerBound="93578.6" upperBound="95392" ci="0.95"/>
+        <standardDeviation value="4618.95" lowerBound="4042.85" upperBound="5625.57" ci="0.95"/>
+        <outliers variance="0.474322" lowMild="0" lowSevere="0" highMild="2" highSevere="0"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="16" clockResolution="16.7771" estimatedDuration="1.6976e+06">
+        <!--All values in nano seconds-->
+        <mean value="915.019" lowerBound="903.275" upperBound="935.148" ci="0.95"/>
+        <standardDeviation value="76.7315" lowerBound="49.5399" upperBound="108.045" ci="0.95"/>
+        <outliers variance="0.727833" lowMild="0" lowSevere="0" highMild="0" highSevere="7"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="1.14864e+07">
+        <!--All values in nano seconds-->
+        <mean value="113834" lowerBound="112026" upperBound="116008" ci="0.95"/>
+        <standardDeviation value="10094.4" lowerBound="8581.87" upperBound="12047.8" ci="0.95"/>
+        <outliers variance="0.748523" lowMild="0" lowSevere="0" highMild="4" highSevere="0"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Basalt) - SE3_6" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/basalt_spline_benchmarks.cpp" line="135">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="17" clockResolution="16.7771" estimatedDuration="1.7357e+06">
+        <!--All values in nano seconds-->
+        <mean value="911.389" lowerBound="900.752" upperBound="932.934" ci="0.95"/>
+        <standardDeviation value="73.7724" lowerBound="39.9455" upperBound="118.281" ci="0.95"/>
+        <outliers variance="0.717292" lowMild="0" lowSevere="0" highMild="4" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="1.25997e+07">
+        <!--All values in nano seconds-->
+        <mean value="124741" lowerBound="122587" upperBound="128365" ci="0.95"/>
+        <standardDeviation value="14003.4" lowerBound="9610.58" upperBound="20430.8" ci="0.95"/>
+        <outliers variance="0.831252" lowMild="0" lowSevere="0" highMild="4" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="13" clockResolution="16.7771" estimatedDuration="1.7849e+06">
+        <!--All values in nano seconds-->
+        <mean value="1117.07" lowerBound="1079.32" upperBound="1182.26" ci="0.95"/>
+        <standardDeviation value="247.547" lowerBound="161.477" upperBound="354.304" ci="0.95"/>
+        <outliers variance="0.957068" lowMild="0" lowSevere="0" highMild="0" highSevere="9"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="1.5305e+07">
+        <!--All values in nano seconds-->
+        <mean value="166481" lowerBound="164053" upperBound="170739" ci="0.95"/>
+        <standardDeviation value="15987.5" lowerBound="9902.77" upperBound="25160.5" ci="0.95"/>
+        <outliers variance="0.779426" lowMild="0" lowSevere="0" highMild="5" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="13" clockResolution="16.7771" estimatedDuration="1.6926e+06">
+        <!--All values in nano seconds-->
+        <mean value="1123.9" lowerBound="1113.8" upperBound="1142.55" ci="0.95"/>
+        <standardDeviation value="67.7749" lowerBound="43.5618" upperBound="106.176" ci="0.95"/>
+        <outliers variance="0.575043" lowMild="0" lowSevere="0" highMild="1" highSevere="7"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="1" clockResolution="16.7771" estimatedDuration="1.79887e+07">
+        <!--All values in nano seconds-->
+        <mean value="175100" lowerBound="171667" upperBound="181643" ci="0.95"/>
+        <standardDeviation value="23378.5" lowerBound="14098.6" upperBound="36894.5" ci="0.95"/>
+        <outliers variance="0.873212" lowMild="0" lowSevere="0" highMild="3" highSevere="4"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SO3_4" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="89" clockResolution="16.7771" estimatedDuration="1.6821e+06">
+        <!--All values in nano seconds-->
+        <mean value="164.338" lowerBound="162.924" upperBound="167.75" ci="0.95"/>
+        <standardDeviation value="10.4693" lowerBound="4.99288" upperBound="19.2293" ci="0.95"/>
+        <outliers variance="0.605201" lowMild="0" lowSevere="0" highMild="0" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="32" clockResolution="16.7771" estimatedDuration="1.7056e+06">
+        <!--All values in nano seconds-->
+        <mean value="502.808" lowerBound="495.398" upperBound="519.982" ci="0.95"/>
+        <standardDeviation value="54.4957" lowerBound="28.2163" upperBound="105.507" ci="0.95"/>
+        <outliers variance="0.820837" lowMild="0" lowSevere="0" highMild="0" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="80" clockResolution="16.7771" estimatedDuration="1.688e+06">
+        <!--All values in nano seconds-->
+        <mean value="94.8834" lowerBound="93.9449" upperBound="96.8936" ci="0.95"/>
+        <standardDeviation value="6.6662" lowerBound="3.80724" upperBound="11.9991" ci="0.95"/>
+        <outliers variance="0.646211" lowMild="1" lowSevere="0" highMild="1" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="44" clockResolution="16.7771" estimatedDuration="1.7072e+06">
+        <!--All values in nano seconds-->
+        <mean value="405.014" lowerBound="392.913" upperBound="422.676" ci="0.95"/>
+        <standardDeviation value="73.6849" lowerBound="54.8657" upperBound="93.0422" ci="0.95"/>
+        <outliers variance="0.925917" lowMild="0" lowSevere="0" highMild="0" highSevere="13"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="112" clockResolution="16.7771" estimatedDuration="1.68e+06">
+        <!--All values in nano seconds-->
+        <mean value="111.486" lowerBound="110.414" upperBound="114.563" ci="0.95"/>
+        <standardDeviation value="8.31756" lowerBound="1.49907" upperBound="17.7947" ci="0.95"/>
+        <outliers variance="0.676635" lowMild="0" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="33" clockResolution="16.7771" estimatedDuration="1.7061e+06">
+        <!--All values in nano seconds-->
+        <mean value="511.344" lowerBound="505.055" upperBound="526.787" ci="0.95"/>
+        <standardDeviation value="46.8651" lowerBound="17.2465" upperBound="81.8376" ci="0.95"/>
+        <outliers variance="0.758971" lowMild="0" lowSevere="0" highMild="0" highSevere="6"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SO3_5" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="70" clockResolution="16.7771" estimatedDuration="1.694e+06">
+        <!--All values in nano seconds-->
+        <mean value="195.605" lowerBound="194.628" upperBound="199.015" ci="0.95"/>
+        <standardDeviation value="8.34577" lowerBound="2.56899" upperBound="19.0548" ci="0.95"/>
+        <outliers variance="0.404859" lowMild="1" lowSevere="0" highMild="3" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="25" clockResolution="16.7771" estimatedDuration="1.7275e+06">
+        <!--All values in nano seconds-->
+        <mean value="689.225" lowerBound="681.007" upperBound="721.427" ci="0.95"/>
+        <standardDeviation value="70.8182" lowerBound="6.7517" upperBound="163.733" ci="0.95"/>
+        <outliers variance="0.80029" lowMild="2" lowSevere="0" highMild="2" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="99" clockResolution="16.7771" estimatedDuration="1.683e+06">
+        <!--All values in nano seconds-->
+        <mean value="132.402" lowerBound="131.484" upperBound="134.153" ci="0.95"/>
+        <standardDeviation value="6.25883" lowerBound="3.81376" upperBound="10.1246" ci="0.95"/>
+        <outliers variance="0.454554" lowMild="0" lowSevere="0" highMild="0" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="30" clockResolution="16.7771" estimatedDuration="1.698e+06">
+        <!--All values in nano seconds-->
+        <mean value="581.868" lowerBound="568.284" upperBound="606.661" ci="0.95"/>
+        <standardDeviation value="91.008" lowerBound="56.7306" upperBound="130.055" ci="0.95"/>
+        <outliers variance="0.904711" lowMild="0" lowSevere="0" highMild="1" highSevere="10"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="96" clockResolution="16.7771" estimatedDuration="1.68e+06">
+        <!--All values in nano seconds-->
+        <mean value="139.364" lowerBound="138.621" upperBound="141.165" ci="0.95"/>
+        <standardDeviation value="5.50284" lowerBound="1.49554" upperBound="9.78499" ci="0.95"/>
+        <outliers variance="0.365528" lowMild="0" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="22" clockResolution="16.7771" estimatedDuration="1.738e+06">
+        <!--All values in nano seconds-->
+        <mean value="786.659" lowerBound="772.056" upperBound="850.788" ci="0.95"/>
+        <standardDeviation value="132.259" lowerBound="19.4672" upperBound="311.185" ci="0.95"/>
+        <outliers variance="0.915321" lowMild="0" lowSevere="0" highMild="0" highSevere="8"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SO3_6" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="79" clockResolution="16.7771" estimatedDuration="1.6906e+06">
+        <!--All values in nano seconds-->
+        <mean value="216.993" lowerBound="214.256" upperBound="224.625" ci="0.95"/>
+        <standardDeviation value="21.3845" lowerBound="9.23636" upperBound="45.4177" ci="0.95"/>
+        <outliers variance="0.789703" lowMild="0" lowSevere="0" highMild="0" highSevere="6"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="21" clockResolution="16.7771" estimatedDuration="1.7388e+06">
+        <!--All values in nano seconds-->
+        <mean value="818.524" lowerBound="807.136" upperBound="840.029" ci="0.95"/>
+        <standardDeviation value="77.1126" lowerBound="48.9583" upperBound="132.757" ci="0.95"/>
+        <outliers variance="0.769289" lowMild="0" lowSevere="0" highMild="0" highSevere="6"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="74" clockResolution="16.7771" estimatedDuration="1.6798e+06">
+        <!--All values in nano seconds-->
+        <mean value="182.177" lowerBound="181.345" upperBound="184.316" ci="0.95"/>
+        <standardDeviation value="6.36575" lowerBound="3.02255" upperBound="13.508" ci="0.95"/>
+        <outliers variance="0.306896" lowMild="0" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="23" clockResolution="16.7771" estimatedDuration="1.7365e+06">
+        <!--All values in nano seconds-->
+        <mean value="750.463" lowerBound="744.666" upperBound="778.017" ci="0.95"/>
+        <standardDeviation value="55.7199" lowerBound="3.50246" upperBound="132.748" ci="0.95"/>
+        <outliers variance="0.676506" lowMild="0" lowSevere="0" highMild="2" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="67" clockResolution="16.7771" estimatedDuration="1.6817e+06">
+        <!--All values in nano seconds-->
+        <mean value="180.98" lowerBound="179.215" upperBound="185.552" ci="0.95"/>
+        <standardDeviation value="13.0598" lowerBound="2.44076" upperBound="25.0772" ci="0.95"/>
+        <outliers variance="0.666125" lowMild="0" lowSevere="0" highMild="0" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="17" clockResolution="16.7771" estimatedDuration="1.7051e+06">
+        <!--All values in nano seconds-->
+        <mean value="1009.01" lowerBound="996.582" upperBound="1042.39" ci="0.95"/>
+        <standardDeviation value="96.577" lowerBound="42.6048" upperBound="202.086" ci="0.95"/>
+        <outliers variance="0.779356" lowMild="0" lowSevere="0" highMild="2" highSevere="9"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SE3_4" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="57" clockResolution="16.7771" estimatedDuration="1.7043e+06">
+        <!--All values in nano seconds-->
+        <mean value="161.883" lowerBound="157.248" upperBound="176.145" ci="0.95"/>
+        <standardDeviation value="37.5121" lowerBound="13.1505" upperBound="81.4409" ci="0.95"/>
+        <outliers variance="0.957318" lowMild="2" lowSevere="0" highMild="1" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="29" clockResolution="16.7771" estimatedDuration="1.682e+06">
+        <!--All values in nano seconds-->
+        <mean value="571.217" lowerBound="561.231" upperBound="607.423" ci="0.95"/>
+        <standardDeviation value="80.6896" lowerBound="3.41871" upperBound="184.69" ci="0.95"/>
+        <outliers variance="0.883797" lowMild="0" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="51" clockResolution="16.7771" estimatedDuration="1.7034e+06">
+        <!--All values in nano seconds-->
+        <mean value="137.948" lowerBound="136.394" upperBound="143.961" ci="0.95"/>
+        <standardDeviation value="13.8221" lowerBound="3.0232" upperBound="32.2437" ci="0.95"/>
+        <outliers variance="0.79004" lowMild="0" lowSevere="0" highMild="3" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="19" clockResolution="16.7771" estimatedDuration="1.7347e+06">
+        <!--All values in nano seconds-->
+        <mean value="910.782" lowerBound="898.171" upperBound="938.893" ci="0.95"/>
+        <standardDeviation value="91.2895" lowerBound="51.1559" upperBound="174.205" ci="0.95"/>
+        <outliers variance="0.790046" lowMild="0" lowSevere="0" highMild="1" highSevere="10"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="52" clockResolution="16.7771" estimatedDuration="1.69e+06">
+        <!--All values in nano seconds-->
+        <mean value="133.482" lowerBound="132.312" upperBound="137.954" ci="0.95"/>
+        <standardDeviation value="10.5862" lowerBound="1.91015" upperBound="24.8957" ci="0.95"/>
+        <outliers variance="0.707122" lowMild="1" lowSevere="0" highMild="2" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="16" clockResolution="16.7771" estimatedDuration="1.7872e+06">
+        <!--All values in nano seconds-->
+        <mean value="1116.76" lowerBound="1079.84" upperBound="1232.54" ci="0.95"/>
+        <standardDeviation value="296.646" lowerBound="59.3488" upperBound="650.497" ci="0.95"/>
+        <outliers variance="0.967916" lowMild="0" lowSevere="0" highMild="3" highSevere="8"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SE3_5" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="50" clockResolution="16.7771" estimatedDuration="1.685e+06">
+        <!--All values in nano seconds-->
+        <mean value="196.355" lowerBound="194.805" upperBound="202.229" ci="0.95"/>
+        <standardDeviation value="13.5629" lowerBound="3.38332" upperBound="31.4303" ci="0.95"/>
+        <outliers variance="0.645735" lowMild="0" lowSevere="0" highMild="1" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="23" clockResolution="16.7771" estimatedDuration="1.7112e+06">
+        <!--All values in nano seconds-->
+        <mean value="732.295" lowerBound="723.47" upperBound="774.14" ci="0.95"/>
+        <standardDeviation value="84.5712" lowerBound="4.71655" upperBound="201.506" ci="0.95"/>
+        <outliers variance="0.841536" lowMild="2" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="41" clockResolution="16.7771" estimatedDuration="1.7015e+06">
+        <!--All values in nano seconds-->
+        <mean value="191.033" lowerBound="188.685" upperBound="200.504" ci="0.95"/>
+        <standardDeviation value="22.0582" lowerBound="2.33707" upperBound="52.3514" ci="0.95"/>
+        <outliers variance="0.841533" lowMild="0" lowSevere="0" highMild="0" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="14" clockResolution="16.7771" estimatedDuration="1.7724e+06">
+        <!--All values in nano seconds-->
+        <mean value="1272.01" lowerBound="1230.7" upperBound="1429.31" ci="0.95"/>
+        <standardDeviation value="365.346" lowerBound="76.1533" upperBound="837.907" ci="0.95"/>
+        <outliers variance="0.978181" lowMild="1" lowSevere="0" highMild="3" highSevere="7"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="46" clockResolution="16.7771" estimatedDuration="1.679e+06">
+        <!--All values in nano seconds-->
+        <mean value="170.412" lowerBound="168.529" upperBound="176.68" ci="0.95"/>
+        <standardDeviation value="15.6262" lowerBound="4.59458" upperBound="34.9464" ci="0.95"/>
+        <outliers variance="0.758982" lowMild="0" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="11" clockResolution="16.7771" estimatedDuration="1.7237e+06">
+        <!--All values in nano seconds-->
+        <mean value="1470.66" lowerBound="1441.69" upperBound="1552.41" ci="0.95"/>
+        <standardDeviation value="228.908" lowerBound="99.8954" upperBound="487.236" ci="0.95"/>
+        <outliers variance="0.904659" lowMild="0" lowSevere="16" highMild="1" highSevere="9"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <TestCase name="B-Spline Cost Functions (Hyperion) - SE3_6" tags="[benchmark]" filename="/home/parallels/CLionProjects/hyperion_dev/benchmarks/src/hyperion_benchmarks/splines/hyperion_spline_benchmarks.cpp" line="152">
+      <BenchmarkResults name="Pose" samples="100" resamples="100000" iterations="38" clockResolution="16.7771" estimatedDuration="1.7062e+06">
+        <!--All values in nano seconds-->
+        <mean value="252.749" lowerBound="250.151" upperBound="261.486" ci="0.95"/>
+        <standardDeviation value="21.7118" lowerBound="7.07254" upperBound="48.7676" ci="0.95"/>
+        <outliers variance="0.73809" lowMild="0" lowSevere="0" highMild="0" highSevere="6"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="PoseWithJacobians" samples="100" resamples="100000" iterations="18" clockResolution="16.7771" estimatedDuration="1.6956e+06">
+        <!--All values in nano seconds-->
+        <mean value="928.626" lowerBound="914.924" upperBound="993.884" ci="0.95"/>
+        <standardDeviation value="131.571" lowerBound="7.21293" upperBound="313.499" ci="0.95"/>
+        <outliers variance="0.883835" lowMild="0" lowSevere="0" highMild="1" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Velocity" samples="100" resamples="100000" iterations="37" clockResolution="16.7771" estimatedDuration="1.6983e+06">
+        <!--All values in nano seconds-->
+        <mean value="234.265" lowerBound="232.464" upperBound="238.894" ci="0.95"/>
+        <standardDeviation value="13.3523" lowerBound="2.85351" upperBound="25.5343" ci="0.95"/>
+        <outliers variance="0.544917" lowMild="0" lowSevere="0" highMild="0" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="VelocityWithJacobians" samples="100" resamples="100000" iterations="11" clockResolution="16.7771" estimatedDuration="1.7919e+06">
+        <!--All values in nano seconds-->
+        <mean value="1542.38" lowerBound="1508.78" upperBound="1675.03" ci="0.95"/>
+        <standardDeviation value="307.554" lowerBound="50.9369" upperBound="724.316" ci="0.95"/>
+        <outliers variance="0.946453" lowMild="0" lowSevere="0" highMild="0" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Acceleration" samples="100" resamples="100000" iterations="39" clockResolution="16.7771" estimatedDuration="1.716e+06">
+        <!--All values in nano seconds-->
+        <mean value="223.075" lowerBound="221.664" upperBound="226.419" ci="0.95"/>
+        <standardDeviation value="10.3571" lowerBound="3.22257" upperBound="18.5143" ci="0.95"/>
+        <outliers variance="0.444662" lowMild="1" lowSevere="0" highMild="0" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="AccelerationWithJacobians" samples="100" resamples="100000" iterations="8" clockResolution="16.7771" estimatedDuration="1.7384e+06">
+        <!--All values in nano seconds-->
+        <mean value="1990.34" lowerBound="1937.27" upperBound="2137.49" ci="0.95"/>
+        <standardDeviation value="408.098" lowerBound="117.073" upperBound="845.2" ci="0.95"/>
+        <outliers variance="0.946646" lowMild="0" lowSevere="0" highMild="0" highSevere="3"/>
+      </BenchmarkResults>
+      <OverallResult success="true"/>
+    </TestCase>
+    <OverallResults successes="0" failures="0" expectedFailures="0"/>
+    <OverallResultsCases successes="12" failures="0" expectedFailures="0"/>
+  </Group>
+  <OverallResults successes="0" failures="0" expectedFailures="0"/>
+  <OverallResultsCases successes="12" failures="0" expectedFailures="0"/>
+</Catch>

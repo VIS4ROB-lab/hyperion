@@ -1,0 +1,64 @@
+{# ----------------------------------------------------------------------------
+ # SymForce - Copyright 2022, Skydio, Inc.
+ # This source code is under the Apache 2.0 license found in the LICENSE file.
+ # ---------------------------------------------------------------------------- #}
+
+{%- import "UTILS.jinja" as util with context -%}
+
+#pragma once
+
+{% if spec.config.support_complex %}
+#include <complex>
+{% endif %}
+
+{% if spec.config.extra_imports %}
+{% for extra_import in spec.config.extra_imports %}
+#include "{{ extra_import }}" // User-defined extra import
+{% endfor %}
+{% endif %}
+{# Conditional? #}
+#include <Eigen/Core>
+{% if spec.sparse_mat_data.__len__() > 0 -%}
+#include <Eigen/SparseCore>
+{% endif %}
+
+{% for cls in sf.GEO_TYPES + sf.CAM_TYPES %}
+{% if cls.__name__ in spec.types_included %}
+#include <sym/{{ python_util.camelcase_to_snakecase(cls.__name__) }}.h>
+{% endif %}
+{% endfor %}
+
+{% for name in spec.inputs.keys() | list + spec.outputs.keys() | list %}
+{% if name in spec.typenames_dict %}
+#include <lcmtypes/{{ spec.namespaces_dict[name] }}/{{ spec.typenames_dict[name] }}.hpp>
+{% endif %}
+{% endfor %}
+
+namespace {{ spec.namespace }} {
+
+{% if spec.docstring %}
+{{ util.print_docstring(spec.docstring) }}
+{% endif %}
+template <typename {{ util.format_typename(Symbol) }}>
+{% if spec.config.force_no_inline %}
+__attribute__((noinline))
+{% endif %}
+{{ util.function_declaration(spec, is_declaration=True) }} {
+    {% if spec.config.support_complex %}
+    using namespace std::complex_literals;
+    {% endif %}
+
+    {{ util.expr_code(spec) -}}
+}  // NOLINT(readability/fn_size)
+
+{% if spec.config.explicit_template_instantiation_types is not none %}
+{% for type in spec.config.explicit_template_instantiation_types %}
+{% set name = python_util.snakecase_to_camelcase(spec.name) %}
+extern template {{ util.get_return_type(spec, scalar_type=type) }} {{ name }}<{{ type }}>(
+    {{- util.input_args_declaration(spec, is_declaration=False, scalar_type=type) -}});
+
+{% endfor -%}
+{% endif -%}
+
+// NOLINTNEXTLINE(readability/fn_size)
+}  // namespace {{ spec.namespace }}

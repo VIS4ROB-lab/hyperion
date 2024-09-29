@@ -1,0 +1,19 @@
+{# ----------------------------------------------------------------------------
+ # SymForce - Copyright 2022, Skydio, Inc.
+ # This source code is under the Apache 2.0 license found in the LICENSE file.
+ # ---------------------------------------------------------------------------- #}
+
+{%- import "UTILS.jinja" as util with context -%}
+
+#include "./{{ spec.name }}.hpp"
+
+namespace {{ spec.namespace }} {
+
+{% for type in spec.config.explicit_template_instantiation_types %}
+{% set name = python_util.snakecase_to_camelcase(spec.name) %}
+template {{ util.get_return_type(spec, scalar_type=type) }} {{ name }}<{{ type }}>(
+    {{- util.input_args_declaration(spec, is_declaration=False, scalar_type=type) -}});
+
+{% endfor -%}
+
+}  // namespace {{ spec.namespace }}

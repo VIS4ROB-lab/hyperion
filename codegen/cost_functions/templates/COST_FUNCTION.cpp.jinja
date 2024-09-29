@@ -1,0 +1,41 @@
+{%- import "UTILS.jinja" as util with context -%}
+
+{% if cost.specialized_permutations|length > 1 -%}
+#include <span>
+
+#include <glog/logging.h>
+{% endif %}
+
+#include <sym/ops/storage_ops.h>
+#include <sym/util/epsilon.h>
+
+#include "{{ cost.cost_function_name }}.hpp"
+{% for include in cost.imports -%}
+    #include "{{ cost.relative_dir_to_factors }}/{{ include }}.hpp"
+{% endfor %}
+
+{% if factor.extends_ceres %}
+    namespace {{ cost.namespace }}::ceres {
+
+        using namespace {{ factor.namespace }};
+
+        {% set scalar_type = 'double' %}
+        auto {{ python_util.snakecase_to_camelcase(cost.cost_function_name) }}::
+        Evaluate({{ scalar_type }} const* const* parameters, {{ scalar_type }}* residuals, {{ scalar_type }}** jacobians) const -> bool {
+            {{ util.format_cost_function_evaluation_body(factor, cost, scalar_type) }}
+        }
+
+    }  // namespace {{ cost.namespace }}::ceres
+{% else %}
+    namespace {{ cost.namespace }} {
+
+        using namespace {{ factor.namespace }};
+
+        {% set scalar_type = 'Scalar' %}
+        auto {{ python_util.snakecase_to_camelcase(cost.cost_function_name) }}::
+        evaluate({{ scalar_type }} const* const* parameters, {{ scalar_type }}* residuals, {{ scalar_type }}** jacobians) const -> bool {
+            {{ util.format_cost_function_evaluation_body(factor, cost, scalar_type) }}
+        }
+
+    }  // namespace {{ cost.namespace }}
+{% endif %}

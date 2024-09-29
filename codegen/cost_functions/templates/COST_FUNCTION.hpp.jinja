@@ -1,0 +1,70 @@
+{%- import "UTILS.jinja" as util with context -%}
+
+#pragma once
+
+{% if factor.config.support_complex %}
+#include <complex>
+{% endif %}
+
+{% if factor.config.extra_imports %}
+{% for extra_import in factor.config.extra_imports %}
+#include "{{ extra_import }}" // User-defined extra import
+{% endfor %}
+{% endif %}
+
+{% set internal = namespace(has_geo_include=False) %}
+{% for cls in sf.GEO_TYPES + sf.CAM_TYPES %}
+{% if cls.__name__ in factor.types_included %}
+{% set internal.has_geo_include = True %}
+#include <sym/{{ python_util.camelcase_to_snakecase(cls.__name__) }}.h>
+{% endif %}
+{% endfor %}
+{% if not internal.has_geo_include -%}
+#include <Eigen/Dense>
+{% endif %}
+
+{% for name in factor.inputs.keys() | list + factor.outputs.keys() | list %}
+{% if name in factor.typenames_dict %}
+#include <lcmtypes/{{ factor.namespaces_dict[name] }}/{{ factor.typenames_dict[name] }}.hpp>
+{% endif %}
+{% endfor %}
+
+{% if factor.extends_ceres %}
+    #include <ceres/sized_cost_function.h>
+
+    namespace {{ cost.namespace }}::ceres {
+
+    {% set scalar_type = "double" %}
+    class {{ python_util.snakecase_to_camelcase(cost.cost_function_name) }} final : public ::ceres::{{ util.format_sized_cost_function_int_signature(factor, cost) }} {
+        public:
+            {{ util.format_cost_function_constructor(factor, cost, scalar_type) }}
+            {{ util.format_cost_function_getters_and_setters(factor, cost, scalar_type) }}
+
+            /// See documentation of base class.
+            /// @note Returns (tangent_dim x ambient_dim) Jacobians stored in row-major order.
+            auto Evaluate({{ scalar_type }} const* const* parameters, {{ scalar_type }}* residuals, {{ scalar_type }}** jacobians) const -> bool override;
+
+            {{ util.format_cost_function_members(factor, cost, scalar_type) }}
+    };
+
+    }  // namespace {{ cost.namespace }}::ceres
+{% else %}
+    #include "hyperion/cost_functions/sized_cost_function.hpp"
+
+    namespace {{ cost.namespace }} {
+
+    {% set scalar_type = 'Scalar' %}
+    class {{ python_util.snakecase_to_camelcase(cost.cost_function_name) }} final : public {{ util.format_sized_cost_function_type_signature(factor, cost, scalar_type) }} {
+        public:
+            {{ util.format_cost_function_constructor(factor, cost, scalar_type) }}
+            {{ util.format_cost_function_getters_and_setters(factor, cost, scalar_type) }}
+
+            /// See documentation of base class.
+            /// @note Returns (tangent_dim x tangent_dim) Jacobians stored in column-major order.
+            auto evaluate({{ scalar_type }} const* const* parameters, {{ scalar_type }}* residuals, {{ scalar_type }}** jacobians) const -> bool override;
+
+            {{ util.format_cost_function_members(factor, cost, scalar_type) }}
+        };
+
+    }  // namespace {{ cost.namespace }}
+{% endif %}
