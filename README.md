@@ -41,14 +41,16 @@ Hyperion was presented at the [European Conference on Computer Vision 2024 (ECCV
 Until the final version of record becomes available, please cite its archived version as follows:
 
 ```
-@misc{Hug:etal:arXiv2024,
-      title={{Hyperion -- A fast, versatile symbolic Gaussian Belief Propagation framework for Continuous-Time SLAM}}, 
-      author={David Hug and Ignacio Alzugaray and Margarita Chli},
-      year={2024},
-      eprint={2407.07074},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2407.07074}, 
+@inproceedings{Hug:etal:ECCV2024,
+  title={{Hyperion -- A fast, versatile symbolic Gaussian Belief Propagation framework for Continuous-Time SLAM}},  
+  author={David Hug and Ignacio Alzugaray and Margarita Chli},
+  booktitle={Computer Vision -- ECCV 2024},
+  year={2024},
+  publisher={Springer Nature Switzerland},
+  address={Cham},
+  pages={215--231},
+  isbn={978-3-031-73404-5},
+  doi={10.1007/978-3-031-73404-5_13}
 }
 ```
 
